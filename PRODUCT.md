@@ -18,7 +18,7 @@ Secondary users are prospective families, teachers and local community partners.
 
 ## Product Purpose
 
-Provide one clear, friendly home for the Parents and Guardians Association of the 1st Kindergarten of Kryoneri. Success means visitors can understand the association’s role, find school and association information, read announcements and contact the right people within seconds.
+Provide one clear, friendly home for the Parents and Guardians Association of the 1st Kindergarten of Kryoneri. Success means visitors can understand the association’s role, find school and association information, read announcements, retrieve useful documents and contact the right people within seconds.
 
 ## Positioning
 
@@ -26,14 +26,16 @@ The site is the practical digital noticeboard and gathering point for this speci
 
 ## Operating Context
 
-The site is read in short visits, often from a phone. Information changes by school year. Announcements, activities, documents and contact details need to be easy for non-technical association members to replace.
+The site is read in short visits, often from a phone. Information changes by school year. Announcements, activities, documents and contact details are maintained through Pages CMS so non-technical association members can update them without editing the site code.
 
 ## Capabilities and Constraints
 
-- Greek-language, responsive single-page public website.
-- Sections for the school, the association, announcements and contact.
+- Greek-language, responsive public website with a main community page and a dedicated useful-documents library.
+- Sections for the school, the association, announcements and contact, plus CMS-managed activities and document downloads.
+- Pages CMS manages site copy, announcements, activities, document metadata and uploaded media in repository-backed content files.
+- Document entries support file upload, date, category, description and a publication toggle; the public library lists only publishable entries with files and provides explicit empty and loading-error states.
 - Accessible navigation, keyboard focus and reduced-motion support.
-- No backend or content-management system is confirmed.
+- The public site remains statically hosted; content management is Git-backed rather than a custom application backend.
 - The association’s official email, board members, constitution, social links, photos and current announcements are open decisions and must not be fabricated.
 
 ## Brand Commitments

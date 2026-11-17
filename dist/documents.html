@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="el" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Χρήσιμα έγγραφα και έντυπα του Συλλόγου Γονέων και Κηδεμόνων του 1ου Νηπιαγωγείου Κρυονερίου.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#ffe56b">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:title" content="Χρήσιμα έγγραφα | Σύλλογος Γονέων 1ου Νηπιαγωγείου Κρυονερίου">
+  <meta property="og:description" content="Έντυπα, οδηγοί και χρήσιμα αρχεία για τη σχολική κοινότητα.">
+  <meta property="og:url" content="https://nikos-sakellariou.github.io/sg1nipkrioneriou/documents.html">
+  <link rel="canonical" href="https://nikos-sakellariou.github.io/sg1nipkrioneriou/documents.html">
+  <link rel="icon" href="assets/syllogos-logo.png" type="image/png">
+  <title>Χρήσιμα έγγραφα | Σύλλογος Γονέων 1ου Νηπιαγωγείου Κρυονερίου</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.className='js';</script>
+</head>
+<body class="documents-page">
+  <a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
+  <header class="site-header documents-header">
+    <a class="brand" href="index.html" aria-label="Αρχική σελίδα">
+      <img src="assets/syllogos-logo.png" width="150" alt="Σύλλογος Γονέων και Κηδεμόνων 1ου Νηπιαγωγείου Κρυονερίου">
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Μενού</button>
+    <nav id="site-nav" aria-label="Κύρια πλοήγηση">
+      <a href="index.html#school">Το σχολείο</a>
+      <a href="index.html#association">Ο σύλλογος</a>
+      <a href="index.html#news">Ανακοινώσεις</a>
+      <a href="index.html#activities">Δράσεις</a>
+      <a href="documents.html" aria-current="page">Χρήσιμα έγγραφα</a>
+      <a class="nav-action" href="index.html#contact">Επικοινωνία</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="documents-hero pattern-section" aria-labelledby="documents-title">
+      <div class="documents-hero-inner">
+        <div>
+          <a class="detail-back" href="index.html">← Επιστροφή στην αρχική</a>
+          <h1 id="documents-title">Χρήσιμα έγγραφα</h1>
+          <p>Έντυπα, οδηγοί και αρχεία που συγκεντρώνει ο Σύλλογος για τη σχολική μας κοινότητα.</p>
+        </div>
+        <svg class="documents-hero-mark" viewBox="0 0 180 210" aria-hidden="true">
+          <path d="M27 8h86l40 40v154H27z" fill="#fffdf8" stroke="#202029" stroke-width="7"/>
+          <path d="M113 8v40h40" fill="#ffe56b" stroke="#202029" stroke-width="7" stroke-linejoin="round"/>
+          <path d="M54 89h72M54 119h72M54 149h48" fill="none" stroke="#ff6868" stroke-width="9" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="scallop scallop-white" aria-hidden="true"></div>
+    </section>
+
+    <section class="documents-library" aria-labelledby="library-title">
+      <div class="documents-library-inner">
+        <div class="documents-intro">
+          <h2 id="library-title">Όλα τα έγγραφα</h2>
+          <p id="documents-count" aria-live="polite">Φόρτωση εγγράφων…</p>
+        </div>
+        <div id="documents-list" class="documents-list" aria-busy="true"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="documents-footer">
+    <p>© 2026 Σύλλογος Γονέων &amp; Κηδεμόνων 1ου Νηπιαγωγείου Κρυονερίου</p>
+    <a href="index.html#contact">Επικοινωνία με τον Σύλλογο</a>
+  </footer>
+  <script src="documents.js"></script>
+</body>
+</html>

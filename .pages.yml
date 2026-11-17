@@ -1,8 +1,16 @@
 media:
-  input: dist/assets
-  output: /assets
-  rename: safe
-  categories: [image]
+  - name: images
+    label: Εικόνες
+    input: dist/assets
+    output: /assets
+    rename: safe
+    categories: [image]
+  - name: documents
+    label: Έγγραφα
+    input: dist/documents
+    output: /documents
+    rename: safe
+    categories: [document, spreadsheet]
 
 settings:
   content:
@@ -59,6 +67,8 @@ content:
       - name: hero_image
         label: Κεντρική εικόνα
         type: image
+        options:
+          media: images
       - name: school_title
         label: Τίτλος ενότητας σχολείου
         type: string
@@ -153,6 +163,8 @@ content:
       - name: image
         label: Φωτογραφία (προαιρετική)
         type: image
+        options:
+          media: images
         description: "Μην ανεβάζετε αναγνωρίσιμες φωτογραφίες παιδιών. Αν εμφανίζεται παιδί, το πρόσωπο πρέπει να είναι καλυμμένο ή μη αναγνωρίσιμο."
       - name: image_alt
         label: Περιγραφή φωτογραφίας
@@ -207,6 +219,8 @@ content:
         label: Φωτογραφία
         type: image
         required: true
+        options:
+          media: images
         description: "Μην ανεβάζετε αναγνωρίσιμες φωτογραφίες παιδιών. Επιλέξτε κατασκευές, χώρους ή ομαδικές λήψεις με καλυμμένα/μη αναγνωρίσιμα πρόσωπα."
       - name: image_alt
         label: Περιγραφή φωτογραφίας
@@ -224,6 +238,49 @@ content:
         type: string
       - name: published
         label: Δημοσιευμένη
+        type: boolean
+        required: true
+
+  - name: documents
+    label: Χρήσιμα έγγραφα
+    type: file
+    path: dist/content/documents.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: title
+        label: Τίτλος εγγράφου
+        type: string
+        required: true
+      - name: description
+        label: Σύντομη περιγραφή
+        type: text
+        options:
+          maxlength: 320
+      - name: date
+        label: Ημερομηνία
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: category
+        label: Κατηγορία
+        type: string
+        description: "Π.χ. Έντυπο, Οδηγός, Πρακτικό, Κανονισμός"
+      - name: file
+        label: Αρχείο
+        type: file
+        required: true
+        description: "Ανεβάστε PDF ή αρχείο Word, Excel ή PowerPoint. Μην ανεβάζετε αρχεία με προσωπικά δεδομένα παιδιών."
+        options:
+          media: documents
+          extensions: [pdf, doc, docx, xls, xlsx, ppt, pptx, odt, ods]
+          categories: [document, spreadsheet]
+          rename: safe
+      - name: published
+        label: Δημοσιευμένο
         type: boolean
         required: true
 
