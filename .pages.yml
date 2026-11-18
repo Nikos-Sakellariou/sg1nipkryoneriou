@@ -101,6 +101,11 @@ content:
         label: Εισαγωγή Συλλόγου
         type: text
         required: true
+      - name: board_members
+        label: Μέλη Διοικητικού Συμβουλίου
+        type: string
+        list: true
+        description: "Κάθε μέλος σε ξεχωριστή γραμμή, π.χ. Πρόεδρος — Ονοματεπώνυμο"
       - name: association_note
         label: Σημείωση Συλλόγου
         type: text

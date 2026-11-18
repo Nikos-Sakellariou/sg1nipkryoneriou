@@ -65,6 +65,29 @@ const hydrateSiteContent = (site) => {
     goalItems.forEach((item) => observeReveal(item));
   }
 
+  const board = document.querySelector('[data-cms-board]');
+  const boardMembers = document.querySelector('[data-cms-list="board_members"]');
+  if (board && boardMembers && Array.isArray(site.board_members) && site.board_members.length) {
+    const memberItems = site.board_members
+      .filter((member) => typeof member === 'string' && member.trim())
+      .map((member) => {
+        const item = document.createElement('li');
+        item.textContent = member.trim();
+        return item;
+      });
+
+    if (memberItems.length) {
+      boardMembers.replaceChildren(...memberItems);
+      board.hidden = false;
+    }
+  }
+
+  const associationNote = document.querySelector('[data-cms-note="association_note"]');
+  if (associationNote && typeof site.association_note === 'string' && site.association_note.trim()) {
+    associationNote.textContent = site.association_note.trim();
+    associationNote.hidden = false;
+  }
+
   window.cmsSiteEmail = site.association_email || window.cmsSiteEmail;
 };
 
